@@ -1,0 +1,12 @@
+<mvc:View controllerName="ux402listdetail.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    
+    <m:IllustratedMessage
+        id="notFoundMessagePage"
+        title="{i18n>notFoundTitle}"
+        text="{i18n>notFoundText}"
+        icon="sap-icon://document">    
+    </m:IllustratedMessage>
+
+</mvc:View>

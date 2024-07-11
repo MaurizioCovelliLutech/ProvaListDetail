@@ -1,0 +1,76 @@
+<mvc:View controllerName="ux402listdetail.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ux="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:layout="sap.ui.layout">
+    
+
+    <ux:ObjectPageLayout id="objectPageLayout">
+
+        <ux:headerTitle>
+            <ux:ObjectPageDynamicHeaderTitle id="objectPageDynamicHeader">
+                <ux:expandedHeading>
+                    <m:Title id="title1"
+                        text="{Carrname}"
+                        level="H2"/>
+                </ux:expandedHeading>
+            </ux:ObjectPageDynamicHeaderTitle>
+        </ux:headerTitle>
+
+    </ux:ObjectPageLayout>
+
+    <ux:ObjectPageLayout id="objectPageLayout2">
+
+    <ux:headerContent>
+        <m:FlexBox wrap="Wrap" id="flexBox">
+            <m:Avatar id="avatar" src="sap-icon://flight"/>
+            <layout:VerticalLayout id="verticalLayout1" class="sapUiSmallMarginBeginEnd">
+                <m:Label id="label1" text="{Carrid}"/>
+                <m:Label id="label2" text="{Url}"/> 
+            </layout:VerticalLayout> 
+        </m:FlexBox>
+    </ux:headerContent>
+
+    </ux:ObjectPageLayout>
+
+    <ux:ObjectPageLayout id="objectPageLayout3">
+
+        <ux:sections>
+            <ux:ObjectPageSection id="objectPageSection">
+
+            <ux:ObjectPageSubSection id="objectPageSubSection1">
+            
+            <m:Table id="table" headerText="{i18n>tableHeaderText}" items="{to_Connection}" 
+                noDataText="{i18n>tableNoDataText}">
+                <m:columns>
+                    <m:Column id="column1">
+                        <m:Text id="text1" text="{i18n>idColumnText}"/>
+                    </m:Column>
+
+                    <m:Column id="column2">
+                        <m:Text id="text2" text="{i18n>cityFromColumnText}"/>
+                    </m:Column>
+
+                    <m:Column id="column3">
+                        <m:Text id="text3" text="{i18n>cityToColumnText}"/>
+                    </m:Column>
+                </m:columns>
+
+                <m:items>
+                    <m:ColumnListItem id="columnListItem">
+                        <m:cells>
+                            <m:Text id="text4" text="{Carrid}"/>
+                            <m:Text id="text5" text="{Cityfrom}"/>
+                            <m:Text id="text6" text="{Cityto}"/>
+                        </m:cells>
+                    </m:ColumnListItem>
+                </m:items>
+            </m:Table> 
+            </ux:ObjectPageSubSection>
+            </ux:ObjectPageSection> 
+        </ux:sections>
+
+    </ux:ObjectPageLayout>
+
+
+</mvc:View>
